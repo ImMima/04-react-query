@@ -43,9 +43,9 @@ export default function App() {
       {isSuccess && data.results.length > 0 && (
         <>
           <MovieGrid movies={data.results} onSelect={setSelectedMovie} />
-          {data.total_page > 1 && (
+          {data.total_pages > 1 && (
             <ReactPaginate
-              pageCount={data.total_page}
+              pageCount={data.total_pages}
               pageRangeDisplayed={5}
               marginPagesDisplayed={1}
               onPageChange={({ selected }) => setCurrentPage(selected + 1)}
