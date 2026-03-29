@@ -16,7 +16,10 @@ export const fetchMovies = async (
   page: number,
 ): Promise<SearchResults> => {
   const response = await axios.get<SearchResults>(BASE_URL + "/search/movie", {
-    params: { query, page },
+    params: {
+      query: query,
+      page: page,
+    },
     headers: {
       Authorization: `Bearer ${API_TOKEN}`,
     },
