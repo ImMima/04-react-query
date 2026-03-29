@@ -38,7 +38,7 @@ export default function App() {
     <>
       <Toaster position="top-center" />
       <SearchBar onSubmit={handleSearch} />
-      {isLoading || isFetching} && <Loader />
+      {(isLoading || isFetching) && <Loader />}
       {isError && <ErrorMessage />}
       {isSuccess && data.results.length > 0 && (
         <>
